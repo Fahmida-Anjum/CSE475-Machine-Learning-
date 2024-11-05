@@ -1,26 +1,3 @@
 Mango Leaf Disease Classification
-Objective
-This project classifies mango leaf diseases using Decision Tree and Random Forest classifiers. By identifying diseases early, this model aids in improving crop health and yield through better management practices.
 
-Introduction
-Mango trees are economically valuable crops susceptible to various leaf diseases. Timely detection is critical, and this project employs Decision Tree and Random Forest models to classify mango leaf images as either healthy or diseased. Feature extraction from images is done using the EfficientNetB0 model to enhance classification performance.
-
-Data Preprocessing
-The dataset consists of mango leaf images in multiple disease categories. Key preprocessing steps include:
-
-Image Resizing to 128x128 pixels for consistency.
-Data Augmentation using transformations like rescaling for better generalization.
-Feature Extraction with EfficientNetB0 to create input vectors for the classifiers.
-Model Architecture
-Decision Tree Classifier: A simple model that builds a tree structure for decision-making.
-Random Forest Classifier: An ensemble of decision trees that reduces overfitting and improves accuracy.
-Training Process
-Models were trained on features from EfficientNetB0, with Random Forest set to 200 estimators and a maximum depth of 30. Model evaluation was done using accuracy, precision, recall, F1 score, and a confusion matrix.
-
-Results
-The Random Forest classifier outperformed the Decision Tree:
-
-Decision Tree: Accuracy = 0.495, F1 Score = 0.50 (macro avg)
-Random Forest: Accuracy = 0.6425, F1 Score = 0.64 (macro avg)
-Conclusion
-Random Forest provided higher accuracy and generalization, demonstrating effectiveness in handling data complexities. Further enhancements could include exploring deep learning models like CNNs for improved performance.
+This project aims to classify mango leaf diseases using Decision Tree and Random Forest classifiers, contributing to improved crop health and yield management by enabling early disease detection. Mango trees, valuable yet vulnerable to various diseases, benefit from timely intervention, and this project leverages image classification to identify diseased versus healthy leaves. The dataset of mango leaf images underwent preprocessing steps, including resizing images to 128x128 pixels, applying data augmentation, and extracting features using EfficientNetB0, a pre-trained model that captures detailed spatial features for classification. The models—Decision Tree and Random Forest—were trained using these extracted features, with Random Forest initialized with 200 estimators and a maximum depth of 30 for optimal performance. Evaluation metrics, including accuracy, precision, recall, F1 score, and a confusion matrix, were used to assess the models. Results indicate that Random Forest outperformed the Decision Tree classifier, achieving an accuracy of 0.6425 and an F1 score of 0.64, while Decision Tree yielded lower scores with an accuracy of 0.4950 and an F1 score of 0.50. The ensemble approach of Random Forest proved effective in handling the dataset’s complexity and reducing overfitting. Further improvements, such as exploring deep learning models like Convolutional Neural Networks (CNNs) specifically designed for image classification, and advanced hyperparameter tuning, may enhance classification accuracy even more.
